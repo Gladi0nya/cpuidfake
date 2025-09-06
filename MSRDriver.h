@@ -27,7 +27,7 @@ struct SMSRInOut {
    EMSR_COMMAND msr_command;      // command for read or write register
    unsigned int register_number;  // register number
    union {
-      long long value;            // 64 bit value to read or write
+      __int64 value;              // 64 bit value to read or write
       unsigned int val[2];        // lower and upper 32 bits
    };
 };
